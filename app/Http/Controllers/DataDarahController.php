@@ -2,17 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Permintaan;
-use App\JenisDarah;
 use Illuminate\Http\Request;
+use App\JenisDarah;
 
-class PermintaanController extends Controller
+class DataDarahController extends Controller
 {
     public function index()
     {
-        $permintaan = Permintaan::all();
         $jenisdarah = JenisDarah::all();
-        return view('admin.datapermintaan',compact('permintaan', 'jenisdarah'));
+        return view('admin.datadarah',compact('jenisdarah'));
+
     }
     
     public function create()
@@ -22,11 +21,8 @@ class PermintaanController extends Controller
 
     public function tambah(Request $request)
     {
-        Permintaan::create([
-            // 'tahun' => $request->tahun,
-            'bulan' => $request->bulan,
+        JenisDarah::create([
             'jenis_darah' => $request->jenis_darah,
-            'permintaan' => $request->permintaan,
         ]);
         // Alert::success('Data Berhasil di simpan');
         return redirect()->back();
@@ -38,18 +34,14 @@ class PermintaanController extends Controller
     }
 
     public function edit($id){
-        $edit = Permintaan::where('id',$id)->first();
-        // return $edit
+        $edit = JenisDarah::find($id);
         return response()->json($edit);
     }
 
     public function update(Request $request)
     {
-        $edit = Permintaan::find($request->id);
-        // $edit->tahun = $request->tahun;
-        $edit->bulan = $request->bulan;
+        $edit = JenisDarah::find($request->id);
         $edit->jenis_darah = $request->jenis_darah;
-        $edit->permintaan = $request->permintaan;
         $edit->save();
         
         // Alert::success('Data Berhasil di Update');
@@ -57,7 +49,7 @@ class PermintaanController extends Controller
     }
 
     public function hapus($id){
-        Permintaan::destroy($id);
+        JenisDarah::destroy($id);
         // Alert::success('Data Berhasil di Hapus');
         return redirect()->back();
     }

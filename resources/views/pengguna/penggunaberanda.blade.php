@@ -1,11 +1,9 @@
-@extends('layouts.admin')
+@extends('layouts.pengguna')
 @section('content')
-@section('judul','Beranda')
 
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-
         <!-- Small boxes (Stat box) -->
         <div class="row">
           <!-- ./col -->
@@ -14,13 +12,13 @@
             <div class="small-box bg-danger">
               <div class="inner">
                 <h3>65</h3>
-    
+
                 <p>Data Permintaan Darah</p>
               </div>
               <div class="icon">
                 <i class="ion ion-pie-graph"></i>
               </div>
-              <a href="{{('permintaan')}}" class="small-box-footer">Lihat <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{('permintaanpengguna')}}" class="small-box-footer">Lihat <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -35,26 +33,12 @@
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
               </div>
-              <a href="{{('prediksi')}}" class="small-box-footer">Lihat <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-4 col-6">
-            <!-- small box -->
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3>53</h3>
-
-                <p>Data Pengguna</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-person"></i>
-              </div>
-              <a href="{{('pengguna')}}" class="small-box-footer">Lihat <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="{{('prediksipengguna')}}" class="small-box-footer">Lihat <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
         </div>
-      </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.container-fluid -->
     </section>
     <!-- /.content -->
   </div>

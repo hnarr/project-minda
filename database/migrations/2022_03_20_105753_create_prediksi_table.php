@@ -16,9 +16,9 @@ class CreatePrediksiTable extends Migration
         Schema::create('prediksi', function (Blueprint $table) {
             $table->id();
             $table->integer('tahun');
-            $table->integer('bulan');
+            $table->string('bulan');
             $table->string('jenis_darah', 3);
-            $table->string('gol_darah', 2);
+            $table->float('alpha', 3);
             $table->integer('prediksi');
             $table->timestamps();
         });

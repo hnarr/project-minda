@@ -6,13 +6,13 @@ use App\Permintaan;
 use App\JenisDarah;
 use Illuminate\Http\Request;
 
-class PermintaanController extends Controller
+class PermintaanPenggunaController extends Controller
 {
     public function index()
     {
         $permintaan = Permintaan::all();
         $jenisdarah = JenisDarah::all();
-        return view('admin.datapermintaan',compact('permintaan', 'jenisdarah'));
+        return view('pengguna.datapermintaan',compact('permintaan', 'jenisdarah'));
     }
     
     public function create()

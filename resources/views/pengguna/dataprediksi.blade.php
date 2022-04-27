@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.pengguna')
 @section('content')
 @section('judul','Data Prediksi')
 @section('title','Data Prediksi')

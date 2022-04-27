@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login</title>
 <!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="{{asset('loginv16/images/icons/favicon.ico')}}"/>
+	{{-- <link rel="icon" type="image/png" href="{{asset('loginv16/images/icons/favicon.ico')}}"/> --}}
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="{{asset('loginv16/vendor/bootstrap/css/bootstrap.min.css')}}">
 <!--===============================================================================================-->
@@ -33,7 +33,7 @@
 		<div class="container-login100" style="background-image: url('loginv16/images/bg-01.jpg');">
 			<div class="wrap-login100 p-t-30 p-b-50">
 				<span class="login100-form-title p-b-41">
-					Account Login
+					Selamat Datang di Sistem Prediksi Permintaan Darah UTD PMI Kota Singkawang
 				</span>
 				<form class="login100-form validate-form p-b-33 p-t-5">
 

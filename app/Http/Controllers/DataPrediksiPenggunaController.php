@@ -5,12 +5,12 @@ namespace App\Http\Controllers;
 use App\Prediksi;
 use Illuminate\Http\Request;
 
-class DataPrediksiController extends Controller
+class DataPrediksiPenggunaController extends Controller
 {
     
     public function index(){
         $prediksi = Prediksi::all();
-        return view('admin.dataprediksi',compact('prediksi'));
+        return view('pengguna.dataprediksi',compact('prediksi'));
     }
 
     public function create()

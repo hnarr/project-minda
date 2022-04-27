@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+@extends('layouts.pengguna')
 @section('content')
 @section('judul','Data Permintaan Darah')
 @section('title','Data Permintaan Darah')
@@ -44,7 +44,7 @@
                               <span aria-hidden="true">&times;</span>
                             </button>
                           </div>
-                          <form action="{{url('permintaan/update')}}" method="POST">
+                          <form action="{{url('permintaanpengguna/update')}}" method="POST">
                             {{ csrf_field() }}
                             <input type="hidden" name="id" id="id" value="{{ $row->id }}">
                             <div class="modal-body">
@@ -96,7 +96,7 @@
                             </div>
                           </div>
                           <div class="modal-footer">
-                            <a href="{{ url ('permintaan/hapus'.$row->id) }}" class="btn btn-danger">Hapus</a>
+                            <a href="{{ url ('permintaanpengguna/hapus'.$row->id) }}" class="btn btn-danger">Hapus</a>
                             <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
                           </div>
                         </div>
@@ -125,7 +125,7 @@
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <form action="{{url('permintaan/tambah')}}" method="POST">
+              <form action="{{url('permintaanpengguna/tambah')}}" method="POST">
                 {{ csrf_field() }}
                 <div class="modal-body">
                   {{-- <div class="form-group">

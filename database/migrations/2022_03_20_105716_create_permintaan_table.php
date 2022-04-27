@@ -13,14 +13,20 @@ class CreatePermintaanTable extends Migration
      */
     public function up()
     {
+        Schema::create('jenis_darah', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('jenis_darah');
+            $table->timestamps();
+        });
+        
         Schema::create('permintaan', function (Blueprint $table) {
             $table->id();
             $table->integer('tahun');
-            $table->integer('bulan');
-            $table->string('jenis_darah', 3);
-            $table->string('gol_darah', 2); 
+            $table->string('bulan');
+            $table->unsignedBigInteger('jenis_darah'); 
             $table->integer('permintaan');
             $table->timestamps();
+            $table->foreign('jenis_darah')->references('id')->on('jenis_darah')->onUpdate('cascade')->onDelete('cascade');
         });
 
 
@@ -33,6 +39,7 @@ class CreatePermintaanTable extends Migration
      */
     public function down()
     {
+        Schema::dropIfExists('jenis_darah');
         Schema::dropIfExists('permintaan');
     }
 }
