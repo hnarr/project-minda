@@ -11,7 +11,6 @@ class DataDarahPenggunaController extends Controller
     {
         $jenisdarah = JenisDarah::all();
         return view('pengguna.datadarah',compact('jenisdarah'));
-
     }
     
     public function create()

@@ -19,7 +19,7 @@
                                     <th>Jenis Darah</th>
                                     <th>Alpha</th>
                                     <th>Prediksi Permintaan Darah</th>
-                                    <th>Opsi</th>
+                                    {{-- <th>Opsi</th> --}}
                                 </tr>
                             </thead>
                             <tbody>
@@ -31,32 +31,7 @@
                                     <td>{{JenisDarah($row->jenis_darah) }}</td>
                                     <td>{{$row->alpha }}</td>
                                     <td>{{$row->prediksi }}</td>
-                                    <td>
-
-                                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#hapus-{{ $row->id }}">Hapus</button>
                                         
-                                        <!-- Start Modal Hapus-->
-                                        <div class="modal fade" id="hapus-{{ $row->id }}" role="dialog">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <h4 class="modal-title">Konfirmasi</h4>
-                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <div>
-                                                            Apakah Anda yakin menghapus Data
-                                                        </div>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <a href="{{ url ('prediksi/hapus'.$row->id) }}" class="btn btn-danger">Hapus</a>
-                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- End Modal Hapus -->
-                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>
